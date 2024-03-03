@@ -1,0 +1,53 @@
+<odoo>
+    <data>
+        <!-- Here I will make Tree View -->
+        <record id="view_ticket_tree" model="ir.ui.view">
+            <field name="name">todo.ticket.tree</field>
+            <field name="model">todo.ticket</field>
+            <field name="arch" type="xml">
+                <tree create="1" delete="1">
+                    <field name="name"/>
+                    <field name="number"/>
+                    <field name="tag"/>
+                    <field name="state"/>
+                    <field name="file"/>
+                    <field name="description"/>
+                    <field name="assign_to"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Here I will make  Form View -->
+        <record id="view_ticket_form" model="ir.ui.view">
+            <field name="name">todo.ticket.form</field>
+            <field name="model">todo.ticket</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="number"/>
+                            <field name="tag"/>
+                            <field name="state"/>
+                            <field name="file"/>
+                            <field name="description"/>
+                            <field name="assign_to"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <!-- Here I will make Actions that link id with menu scroll down -->
+        <record id="todo_ticket_action" model="ir.actions.act_window">
+            <field name="name">All Todo</field>
+            <field name="res_model">todo.ticket</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[]</field>
+        </record>
+
+
+    </data>
+
+</odoo>

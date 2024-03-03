@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_todo_ticket_user,Access Todo Tickets User,model_todo_ticket,,1,1,1,1
+access_todo_ticket_manager,Access Todo Tickets Manager,model_todo_ticket,base.group_user,1,1,1,1
